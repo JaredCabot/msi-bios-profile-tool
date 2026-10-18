@@ -112,6 +112,10 @@ pyinstaller --noconfirm --clean "MSI BIOS Profile Tool.spec"
 
 The result is in `dist/`. `"MSI BIOS Profile Tool" --check` confirms that it starts and carries the files it needs.
 
+## Credits
+
+Written by Jared Cabot, with Claude (Anthropic).
+
 ## Licence
 
 MIT, see [LICENSE](LICENSE). This project is not affiliated with or endorsed by MSI, AMI or AMD. Product names are trademarks of their owners. Nothing from a BIOS image is included in this repository; the tool reads the BIOS files you supply.

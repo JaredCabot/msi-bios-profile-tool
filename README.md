@@ -2,6 +2,8 @@
 
 Reads MSI Click BIOS overclocking profiles (`.ocb`), lists every setting in them with MSI's own help text, and moves a profile to a newer (or older) BIOS version.
 
+**Download:** [Windows](https://github.com/JaredCabot/msi-bios-profile-tool/releases/latest/download/MSI-BIOS-Profile-Tool-windows-x86_64.exe) or [Linux](https://github.com/JaredCabot/msi-bios-profile-tool/releases/latest/download/msi-bios-profile-tool-linux-x86_64), from the [latest release](https://github.com/JaredCabot/msi-bios-profile-tool/releases/latest). Each is a single program that needs no Python and no installer.
+
 MSI boards refuse to load a profile saved under another BIOS version, so after a BIOS update every setting has to be entered again by hand. This tool reads the setup menus out of both BIOS files, works out where each setting lives in each version, and rebuilds the profile for the new BIOS. When you'd rather enter the settings yourself, it gives you a checklist of exactly what differs from the factory defaults.
 
 Written for the MSI MPG X870E CARBON MAX WIFI (MS-7E49) and tested with its BIOS versions 2.A20, 2.A22 and 2.A25. The menu layout was checked against screenshots of the Advanced, Overclocking, Security and Boot menus of the 2.A22 BIOS: the pages, the settings on them, their order and their values match, except for a few entries the BIOS builds at run time (such as Memory OC Mode and the boot device lists). The Hardware Monitor page was checked the same way on 2.A25. Every value matches; the page also shows a few inactive values greyed out (the fan curve of a fan with Smart Fan off, the fixed speed of a fan with Smart Fan on, and the fan group), which the tool leaves out. The System Status page wasn't captured. Other MSI AM5 boards that use the same profile format and Click BIOS X should work, but haven't been tried. Reports on other boards are welcome.
@@ -29,8 +31,8 @@ The tool only writes a profile by converting one the BIOS saved itself. It never
 ## Quick start
 
 1. Download the program for your system from the [Releases](https://github.com/JaredCabot/msi-bios-profile-tool/releases) page and put it in a folder of its own (a USB stick works). It keeps its settings and downloads beside itself.
-   - Windows: `MSI-BIOS-Profile-Tool-windows-x86_64.exe`. It isn't code signed, so SmartScreen asks on the first run: More info, then Run anyway.
-   - Linux: `msi-bios-profile-tool-linux-x86_64`. Run `chmod +x` on it first.
+   - Windows: [`MSI-BIOS-Profile-Tool-windows-x86_64.exe`](https://github.com/JaredCabot/msi-bios-profile-tool/releases/latest/download/MSI-BIOS-Profile-Tool-windows-x86_64.exe). It isn't code signed, so SmartScreen asks on the first run: More info, then Run anyway.
+   - Linux: [`msi-bios-profile-tool-linux-x86_64`](https://github.com/JaredCabot/msi-bios-profile-tool/releases/latest/download/msi-bios-profile-tool-linux-x86_64). Run `chmod +x` on it first.
 2. Put your profiles and the unzipped BIOS files in one folder, arranged any way you like. This is the library.
 3. Start the program. On first run it asks for the library folder, offering the folder the program is in, and offers to download the two programs. Keeping the program in the library folder means Enter is all it needs.
 4. Choose an option from the menu. Reports are written to a `reports` folder inside the library.

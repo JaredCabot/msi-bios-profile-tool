@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: How conversion works
+    url: https://github.com/JaredCabot/msi-bios-profile-tool/blob/main/docs/how-conversion-works.md
+    about: How settings are matched between BIOS versions, and what the conversion report means.
+  - name: Profile format
+    url: https://github.com/JaredCabot/msi-bios-profile-tool/blob/main/docs/profile-format.md
+    about: The .ocb file layout, checksum and settings store IDs.

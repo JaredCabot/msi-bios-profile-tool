@@ -1,0 +1,78 @@
+name: Bug report
+description: Something does not work as the README describes
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Please don't attach BIOS images: they are MSI's files and are large.
+        A profile (`.ocb`) holds only BIOS settings and the CPU name; attach it if you're happy to share it,
+        because most conversion problems can only be traced with the file.
+  - type: input
+    id: version
+    attributes:
+      label: Tool version
+      description: Shown at the top of the menu, for example 1.0.0.
+      placeholder: "1.0.0"
+    validations:
+      required: true
+  - type: input
+    id: board
+    attributes:
+      label: Motherboard
+      description: Model and MSI's MS- number, as on the board or the BIOS download page.
+      placeholder: "MPG X870E CARBON MAX WIFI (MS-7E49)"
+    validations:
+      required: true
+  - type: input
+    id: bios
+    attributes:
+      label: BIOS versions
+      description: The version the profile was saved on, and the target version if you were converting.
+      placeholder: "2.A22 to 2.A25"
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: What were you doing?
+      options:
+        - "Decoding a profile"
+        - "Converting a profile"
+        - "Comparing profiles"
+        - "Reading the settings from this PC"
+        - "Downloading the two programs"
+        - "Starting the tool, or the first-run questions"
+        - "Something else"
+    validations:
+      required: true
+  - type: dropdown
+    id: build
+    attributes:
+      label: Which build
+      options:
+        - "Windows (MSI-BIOS-Profile-Tool-windows-x86_64.exe)"
+        - "Linux (msi-bios-profile-tool-linux-x86_64)"
+        - "From source on Windows (msibios.py)"
+        - "From source on Linux (msibios.py)"
+    validations:
+      required: true
+  - type: input
+    id: python
+    attributes:
+      label: Python version, if you run it from source
+      placeholder: "3.12.4"
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what the tool did instead. Paste any error text from the window.
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: board-result
+    attributes:
+      label: If you loaded a converted profile
+      description: Did the BIOS accept it? Did any setting come out different from the conversion report?

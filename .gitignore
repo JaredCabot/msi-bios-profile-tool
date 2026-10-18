@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# PyInstaller. The built program goes to a Release, not into the repository;
+# the spec is the recipe it is built from and is kept.
+build/
+dist/
+
+# Made by the tool beside itself at run time: the two downloaded programs,
+# unpacked BIOS data, and the user's folder settings.
+bin/
+cache/
+settings.json
+
+# Never publish firmware or settings. BIOS images, OC profiles, settings read
+# from a PC and the reports made from them stay on the user's machine. These
+# patterns are unanchored so they still match if a library folder is ever
+# placed inside the tool folder.
+reports/
+*.ocb
+E*AMSI.*
+*.bin
+*.rom
+*.cap
+*.zip
+uefi-vars.json
+read.log
+*.ifr.txt
